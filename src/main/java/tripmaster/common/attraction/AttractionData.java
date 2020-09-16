@@ -14,12 +14,12 @@ public class AttractionData extends LocationData {
 		super(lat, lon);
 	}
 
-	public AttractionData(String name, String city, String state, double latitude, double longitude) {
+	public AttractionData(UUID id, String name, String city, String state, double latitude, double longitude) {
 		this(latitude,longitude);
+		this.id = id;
 		this.name=name;
 		this.city=city;
 		this.state=state;
-		id = new UUID(0, 0);
 	}
 
 	public AttractionData() {

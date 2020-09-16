@@ -13,7 +13,7 @@ import tripmaster.common.user.User;
  * 
  */
 public class AttractionNearby {
-	public final UUID id; // Basically not requested but required for further reuse of object instances
+	public final UUID id;
 	public final String name;
 	public LocationData attractionLocation;
 	public LocationData userLocation;

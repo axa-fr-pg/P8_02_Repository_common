@@ -7,7 +7,8 @@ public class AttractionDistance extends AttractionData implements Comparable<Att
 	private LocationData fromLocation;
 	
 	public AttractionDistance(LocationData fromLocation, AttractionData toAttraction) {
-		super(toAttraction.name, toAttraction.city, toAttraction.state, toAttraction.latitude, toAttraction.longitude);
+		super(toAttraction.id, toAttraction.name, toAttraction.city, toAttraction.state,
+				toAttraction.latitude, toAttraction.longitude);
 		this.fromLocation = fromLocation;
 	}
 	
