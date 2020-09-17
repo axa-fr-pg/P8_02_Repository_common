@@ -29,7 +29,7 @@ public class AttractionDistance extends AttractionData implements Comparable<Att
 	@Override
 	public int compareTo(AttractionDistance that) {
 		// Check that we are comparing to the same reference
-		if (this.fromLocation.latitude != that.fromLocation.latitude 
+		if (this.fromLocation.latitude != that.fromLocation.latitude
 				|| this.fromLocation.longitude != that.fromLocation.longitude) {
 			throw new RuntimeException("Trying to compare attractions based on different origins");
 		}

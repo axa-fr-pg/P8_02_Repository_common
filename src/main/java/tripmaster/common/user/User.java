@@ -58,6 +58,7 @@ public class User {
 	 * @param userReward to be added
 	 */
 	public void addUserReward(UserReward userReward) {
+		// Check attraction name to assess if a reward has already been granted for the attraction
 		if(userRewards.stream().filter(r -> r.attraction.name.equals(userReward.attraction.name)).count() == 0) {
 			userRewards.add(userReward);
 		}
