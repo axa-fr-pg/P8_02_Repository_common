@@ -3,6 +3,9 @@ package tripmaster.common.user;
 import tripmaster.common.attraction.AttractionData;
 import tripmaster.common.location.VisitedLocationData;
 
+/**
+ * Data structure containing information for a user reward
+ */
 public class UserReward {
 
 	public VisitedLocationData visitedLocation;

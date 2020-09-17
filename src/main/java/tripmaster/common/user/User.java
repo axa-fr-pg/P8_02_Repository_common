@@ -6,6 +6,9 @@ import java.util.UUID;
 
 import tripmaster.common.location.VisitedLocationData;
 
+/**
+ * Data structure containing information for a User
+ */
 public class User {
 	public final UUID userId;
 	public final String userName;
@@ -37,6 +40,11 @@ public class User {
 		return visitedLocations;
 	}
 	
+	/**
+	 * Get the user's last visited location.
+	 * @return the location which has been added lastly to the user's visited location list
+	 * If the list is empty, returns null.
+	 */
 	public VisitedLocationData getLastVisitedLocation() {
 		int listLength = visitedLocations.size();
 		if (listLength == 0) {
@@ -45,6 +53,10 @@ public class User {
 		return visitedLocations.get(listLength - 1);
 	}
 	
+	/**
+	 * Adds a reward the the user's reward list, if the user hasn't been rewarded for the same attraction yet.
+	 * @param userReward to be added
+	 */
 	public void addUserReward(UserReward userReward) {
 		if(userRewards.stream().filter(r -> r.attraction.name.equals(userReward.attraction.name)).count() == 0) {
 			userRewards.add(userReward);
@@ -53,6 +65,5 @@ public class User {
 	
 	public List<UserReward> getUserRewards() {
 		return userRewards;
-	}
-	
+	}	
 }

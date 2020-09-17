@@ -5,6 +5,11 @@ import java.util.List;
 import tripmaster.common.attraction.AttractionNearby;
 import tripmaster.common.user.User;
 
+/**
+ * Data structure containing information for a holiday proposal
+ * @see tripmaster.tourguide.api.TripRequestServiceImpl
+ *
+ */
 public class ProposalForm {
 	public User user;
 	public List<AttractionNearby> attractions;

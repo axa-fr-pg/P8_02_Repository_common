@@ -7,9 +7,8 @@ import tripmaster.common.location.VisitedLocationData;
 import tripmaster.common.user.User;
 
 /**
- * AttractionNearby is the data format exchanged in JSON with the client for the getNearbyAttractions controller
- * 
- * Members are public as tolerated for basic data structure
+ * Data structure containing information for a nearby attraction
+ * @see tripmaster.common.location.LocationData
  * 
  */
 public class AttractionNearby {

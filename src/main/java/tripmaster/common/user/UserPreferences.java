@@ -1,5 +1,8 @@
 package tripmaster.common.user;
 
+/**
+ * Data structure containing information for user preferences
+ */
 public class UserPreferences {
 	
 	public int attractionProximity = Integer.MAX_VALUE;

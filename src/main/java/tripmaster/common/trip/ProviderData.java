@@ -2,6 +2,11 @@ package tripmaster.common.trip;
 
 import java.util.UUID;
 
+/**
+ * Data structure containing information for a provider
+ * @see tripPricer.Provider
+ *
+ */
 public class ProviderData {
 	
 	  public String name;

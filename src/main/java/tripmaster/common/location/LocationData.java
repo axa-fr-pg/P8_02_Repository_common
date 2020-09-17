@@ -1,5 +1,10 @@
 package tripmaster.common.location;
 
+/**
+ * Data structure containing information for a Location
+ * @see gpsUtil.location.Location
+ *
+ */
 public class LocationData {
 	
 	public double latitude;
@@ -17,11 +22,9 @@ public class LocationData {
 	}
 	
 	/**
-	 * Calculates distance in statute miles between locations
-	 * Uses Spherical Law of Cosines
-	 * @param this
-	 * @param loc2
-	 * @return calculated distance
+	 * Calculates the distance from the current location to another location, based on the Spherical Law of Cosines.
+	 * @param that another location to which the distance shall be calculated from the current location (this)
+	 * @return the calculated distance in statute miles
 	 */	
 	public double getDistance(LocationData that) {
         double lat1 = Math.toRadians(this.latitude);

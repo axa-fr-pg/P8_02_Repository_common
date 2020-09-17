@@ -4,6 +4,11 @@ import java.util.UUID;
 
 import tripmaster.common.location.LocationData;
 
+/**
+ * Data structure containing information for an attraction
+ * @see gpsUtil.location.Attraction
+ *
+ */
 public class AttractionData extends LocationData {
 	public String name;
 	public String city;

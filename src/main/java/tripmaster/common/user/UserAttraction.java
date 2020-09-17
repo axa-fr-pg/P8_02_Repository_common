@@ -2,6 +2,10 @@ package tripmaster.common.user;
 
 import tripmaster.common.attraction.AttractionData;
 
+/**
+ * Data structure containing information for a user and attraction pair
+ * @see tripmaster.tourguide.api.RewardRequestServiceImpl
+ */
 public class UserAttraction {
 	
 	public User user;

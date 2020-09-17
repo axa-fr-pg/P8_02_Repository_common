@@ -3,6 +3,11 @@ package tripmaster.common.location;
 import java.util.Date;
 import java.util.UUID;
 
+/**
+ * Data structure containing information for a VisitedLocation
+ * @see gpsUtil.location.VisitedLocation
+ *
+ */
 public class VisitedLocationData {
 	public UUID userId;
 	public LocationData location;
