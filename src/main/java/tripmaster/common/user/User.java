@@ -7,13 +7,13 @@ import java.util.UUID;
 import tripmaster.common.location.VisitedLocationData;
 
 public class User {
-	private final UUID userId;
-	private final String userName;
-	private String phoneNumber;
-	private String emailAddress;
+	public final UUID userId;
+	public final String userName;
+	public String phoneNumber;
+	public String emailAddress;
+	public UserPreferences userPreferences;
 	private List<VisitedLocationData> visitedLocations;
 	private List<UserReward> userRewards;
-	private UserPreferences userPreferences;
 	
 	public User(UUID userId, String userName, String phoneNumber, String emailAddress) {
 		this.userId = userId;
@@ -27,32 +27,8 @@ public class User {
 	
 	public User() {
 		this(new UUID(0,0), new String(), new String(), new String());
-	}
-	
-	public UUID getUserId() {
-		return userId;
-	}
-	
-	public String getUserName() {
-		return userName;
-	}
-	
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-	
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
+	}	
 
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
-	}
-	
-	public String getEmailAddress() {
-		return emailAddress;
-	}
-	
 	public void addToVisitedLocations(VisitedLocationData visitedLocation) {
 		visitedLocations.add(visitedLocation);
 	}
@@ -61,8 +37,12 @@ public class User {
 		return visitedLocations;
 	}
 	
-	public void clearVisitedLocations() {
-		visitedLocations.clear();
+	public VisitedLocationData getLastVisitedLocation() {
+		int listLength = visitedLocations.size();
+		if (listLength == 0) {
+			return null;
+		}
+		return visitedLocations.get(listLength - 1);
 	}
 	
 	public void addUserReward(UserReward userReward) {
@@ -75,19 +55,4 @@ public class User {
 		return userRewards;
 	}
 	
-	public UserPreferences getUserPreferences() {
-		return userPreferences;
-	}
-	
-	public void setUserPreferences(UserPreferences userPreferences) {
-		this.userPreferences = userPreferences;
-	}
-
-	public VisitedLocationData getLastVisitedLocation() {
-		int listLength = visitedLocations.size();
-		if (listLength == 0) {
-			return null;
-		}
-		return visitedLocations.get(listLength - 1);
-	}	
 }

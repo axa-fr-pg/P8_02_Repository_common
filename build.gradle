@@ -12,6 +12,19 @@ plugins {
     id 'maven-publish'
 }
 
+apply plugin: "jacoco"
+jacoco {
+    toolVersion = "0.8.4"
+}
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+test.finalizedBy jacocoTestReport
+
 publishing {
     publications {
         maven(MavenPublication) {
@@ -42,3 +55,4 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
+
