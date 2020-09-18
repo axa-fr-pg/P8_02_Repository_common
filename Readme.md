@@ -1,4 +1,5 @@
 # Common model classes
+This library contains all classes required to define the public data model of the tripmaster workspace.
 
-This package contains all classes required to define the data model of the tripmaster workspace.
-It shall be published to the local maven repository with the gradle publishing task "publishToMavenLocal".
+## Build
+Published the jar file to the local maven repository with the gradle publishing/publishToMavenLocal task.

@@ -30,14 +30,16 @@ publishing {
         maven(MavenPublication) {
             groupId = 'tripmaster'
             artifactId = 'common'
-            version = "1.0"
+            version = "1.0.0"
             from components.java
         }
     }
 }
 
-java {
-    withSourcesJar()
+jar {
+    baseName = 'common'
+    version =  '1.0.0'
+    from sourceSets.main.allSource
 }
 
 repositories {
